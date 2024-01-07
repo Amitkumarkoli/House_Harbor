@@ -27,11 +27,10 @@ class _MyHomePageState extends State<HomePage> {
             SizedBox(
               width: 10,
             ),
-            Text('Lisa',
-            style: TextStyle(
-              fontSize: 10,
-              fontWeight: FontWeight.bold
-            ),)
+            Text(
+              'Lisa',
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+            )
           ],
         ),
         actions: [
@@ -40,7 +39,6 @@ class _MyHomePageState extends State<HomePage> {
         ],
       ),
       body: Row(
-        
         children: [
           const Padding(padding: EdgeInsets.all(18)),
           Column(
@@ -50,28 +48,30 @@ class _MyHomePageState extends State<HomePage> {
                 child: Container(
                   width: 350,
                   height: 160,
-                    margin: const EdgeInsets.only(top:80 ),
-                  decoration:  BoxDecoration(
+                  margin: const EdgeInsets.only(top: 80),
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    image: const DecorationImage(image: AssetImage('assets/house.jpeg'),
-                    fit: BoxFit.cover               
-                    ),
+                    image: const DecorationImage(
+                        image: AssetImage('assets/house.jpeg'),
+                        fit: BoxFit.cover),
                   ),
                 ),
               ),
-              const SizedBox(height: 20,),
-                const Text('Rosewood Retreat',
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                'Rosewood Retreat',
                 textAlign: TextAlign.right,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.bold
-                ),)
-            ],         
+                    fontSize: 16,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
           ),
         ],
       ),
     );
   }
-} 
-
+}
