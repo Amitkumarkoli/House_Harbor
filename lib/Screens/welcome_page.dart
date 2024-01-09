@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house_harbor/Screens/home_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -24,7 +25,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   height: 350,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/welcome_image.png'),
+                      image: AssetImage('assets/house.jpeg'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -37,7 +38,9 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(title: '',)));
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(370, 50),
                   backgroundColor: const Color.fromARGB(255, 108, 179, 238),
