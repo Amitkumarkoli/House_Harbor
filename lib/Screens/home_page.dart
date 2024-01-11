@@ -15,6 +15,7 @@ class _MyHomePageState extends State<HomePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(widget.title),
@@ -52,7 +53,7 @@ class _MyHomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                     image: const DecorationImage(
-                        image: AssetImage('assets/house.jpeg'),
+                        image: AssetImage('assets/house_image.jpeg'),
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -67,11 +68,16 @@ class _MyHomePageState extends State<HomePage> {
                     fontSize: 16,
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.bold),
-              )
+              ),
+              BackButton(onPressed: (){
+                Navigator.pop(context);
+              },),
             ],
           ),
         ],
+        
       ),
+      
     );
   }
 }
