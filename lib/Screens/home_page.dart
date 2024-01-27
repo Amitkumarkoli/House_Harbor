@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house_harbor/Screens/image_description.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -10,12 +11,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(widget.title),
@@ -25,13 +25,14 @@ class _MyHomePageState extends State<HomePage> {
               backgroundImage: AssetImage('assets/profile.jpeg'),
               radius: 13,
             ),
-            SizedBox(
-              width: 10,
-            ),
+            SizedBox(width: 10),
             Text(
               'Lisa',
-              style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-            )
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
         actions: [
@@ -39,45 +40,93 @@ class _MyHomePageState extends State<HomePage> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
         ],
       ),
-      body: Row(
-        children: [
-          const Padding(padding: EdgeInsets.all(18)),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                child: Container(
-                  width: 350,
-                  height: 160,
-                  margin: const EdgeInsets.only(top: 80),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    image: const DecorationImage(
-                        image: AssetImage('assets/house_image.jpeg'),
-                        fit: BoxFit.cover),
+      body: const MyFeed(),
+      bottomNavigationBar: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children:[ IconButton(
+              onPressed: (){            
+                setState(() {
+                });
+              }, 
+              icon: const Icon(Icons.home),
+            ),
+            IconButton(
+            onPressed: (){
+              setState(() {
+              });
+            }, 
+            icon: const Icon(Icons.favorite),
+          ),
+          IconButton(
+            onPressed: (){
+              setState(() {
+              });
+            }, 
+            icon: const Icon(Icons.chat),
+          ),
+          IconButton(
+            onPressed: (){
+              setState(() {
+              });
+            }, 
+            icon: const Icon(Icons.settings),
+          ),
+          ]
+        ),
+      ),
+    );
+  }
+}
+
+
+class MyFeed extends StatelessWidget {
+  const MyFeed({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    Size screenSize =  MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ImageDescription()));
+                },
+                child:  Container(
+                  width: screenSize.width,
+                  height: screenSize.width*0.5,
+                  decoration: BoxDecoration( 
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(image: AssetImage('assets/house_image.jpeg'),
+                    fit:BoxFit.cover
+                    ),
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Text(
-                'Rosewood Retreat',
+            ),
+            const SizedBox(height: 20),
+              Text('Rosewood Retreat',
                 textAlign: TextAlign.right,
-                style: TextStyle(
-                    fontSize: 16,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.bold),
-              ),
-              BackButton(onPressed: (){
-                Navigator.pop(context);
-              },),
-            ],
-          ),
-        ],
-        
+              style: TextStyle(
+                  fontSize: screenSize.width*0.06,
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(width:0.90),
+           BackButton(onPressed: (){
+               Navigator.pop(context);
+              }
+            ),
+          ],
+        ),
       ),
-      
     );
   }
 }
