@@ -24,7 +24,7 @@ House Harbor is a mobile application built using Flutter that connects homebuyer
 
 ## Contributing
 
-We welcome contributions from everyone! Please check out our [Contribution Guidelines](./contributing.md) for details on how to contribute.
+We welcome contributions from everyone! Please check out our [Contribution Guidelines]([(https://github.com/Amitkumarkoli/House_Harbor/blob/master/CONTRIBUTING.md)]) for details on how to contribute.
 
 
 🌟 Star This Repository! 🌟
