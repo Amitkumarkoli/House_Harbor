@@ -26,11 +26,8 @@ If you want to contribute code to the project, please follow these steps:
 
 Please ensure that your code follows the project's coding standards and that your changes don't introduce new issues.
 
-## Code of Conduct
 
-This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). Please review and adhere to it.
-
-Thank you for contributing to [House_Harbor]!
+Thank you for contributing to House_Harbor!
 
 
 🌟 **Star This Repository!** 🌟
