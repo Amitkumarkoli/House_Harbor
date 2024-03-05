@@ -21,13 +21,14 @@ class _MyHomePageState extends State<HomePage> {
         leading: const Padding(
           padding: EdgeInsets.symmetric(horizontal:10.0),
           child: Row(
-            children: [
+            children: <Widget>[
               CircleAvatar(
-                backgroundImage: AssetImage('assets/profile.png'),
-                radius: 13,
+                backgroundImage: AssetImage('assets/profile.png',
+                ),
+                radius: 15,
               ),
             ],
-          ),
+          ), 
         ),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
