@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: ButtonStyle(
                  minimumSize: MaterialStateProperty.all(
                   Size(double.infinity, 50)),
-                 backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
+                 backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 105, 240, 174)), //fromARGB(255, 105, 240, 174)
                 ),
                 child: Text('Login'))
           ],
