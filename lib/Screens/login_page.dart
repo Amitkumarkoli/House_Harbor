@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             TextField(
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'Email',
                 border:OutlineInputBorder()
               )),
             SizedBox(height: 20),
