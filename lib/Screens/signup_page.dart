@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:house_harbor/Screens/home_page.dart';
-import 'package:house_harbor/Screens/signup_page.dart';
+import 'package:house_harbor/Screens/login_page.dart';
 
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,32 +20,26 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             TextField(
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'Enter your email',
                 border:OutlineInputBorder()
               )),
             SizedBox(height: 20),
             TextField( 
               decoration: InputDecoration(
-              labelText: 'Password',
+              labelText: 'Create your password',
               border: OutlineInputBorder(),
               )),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                 }, 
                 style: ButtonStyle(
                  minimumSize: MaterialStateProperty.all(
                   Size(double.infinity, 50)),
                  backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 105, 240, 174)),
                 ),
-                child: Text('Login')),
-                SizedBox(height: 10),
-                TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()));
-                  }, 
-                  child: Text("don't have a account? SignUp"))
+                child: Text('SignUp'))
           ],
         ),
       ),
