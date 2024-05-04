@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:house_harbor/Screens/login_page.dart';
 import 'package:house_harbor/Screens/onboarding_screen.dart';
 
 
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     debugShowCheckedModeBanner : false,
-     home: LoginPage()
+     home: OnboardingScreen()
     );
   }
 }

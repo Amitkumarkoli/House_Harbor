@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:house_harbor/Screens/home_page.dart';
+import 'package:house_harbor/Screens/login_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen ({super.key});
@@ -76,7 +76,7 @@ class _WelcomePageState extends State<OnboardingScreen > {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage(title: '',)));
+                    MaterialPageRoute(builder: (context) => const LoginPage()));
                 },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(370, 50),

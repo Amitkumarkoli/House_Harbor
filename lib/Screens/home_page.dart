@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:house_harbor/Screens/image_description.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title});
-
-  final String title;
+  const HomePage({super.key,});
 
   @override
   State<HomePage> createState() => _MyHomePageState();
@@ -17,7 +15,6 @@ class _MyHomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text(widget.title),
         leading: const Padding(
           padding: EdgeInsets.symmetric(horizontal:10.0),
           child: Row(
