@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "770623170628",
+    "project_id": "house-harbor-dd4d3",
+    "storage_bucket": "house-harbor-dd4d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770623170628:android:770eae52322339790ab411",
+        "android_client_info": {
+          "package_name": "com.example.house_harbor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDath_Zs4DrdqQeK5f5k2b4RjpRM2u_knw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
