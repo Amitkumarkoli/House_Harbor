@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:house_harbor/Screens/onboarding_screen.dart';
 
 
@@ -15,6 +16,12 @@ void main() async{
         projectId: "house-harbor-dd4d3"
       ))
     : await Firebase.initializeApp();
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+    FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+    await Future.delayed(
+      Duration(seconds: 5)
+    );
+    FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
 
